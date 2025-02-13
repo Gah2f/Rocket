@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rocket</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer> </script>
 </head>
 
     <body class="min-h-screen bg-white dark:bg-black dark:text-white">
@@ -14,7 +15,7 @@
                     <a href="#hero">🚀Rocket 👨🏿‍🚀</a>
                 </h1>
                 <div>
-                    <button id="mobile-open-button" class="text-3xl md:hidden cursor-pointer">
+                    <button id="hamburger-button" class="text-3xl md:hidden cursor-pointer">
                         &#9776;
                     </button>
     
@@ -31,7 +32,7 @@
                     </a>
                 </nav>
             </section>
-            <section id="mobile-menu" class="absolute top-0 bg-black w-full text-5xl flex flex-col justify-content-center">
+            <section id="mobile-menu" class="absolute top-0 bg-black w-full text-5xl  flex-col justify-center animate-[var(--animation-open-menu)] origin-top hidden">
                 <button class="text-8xl self-end px-6 ">
                     &times;
                 </button>

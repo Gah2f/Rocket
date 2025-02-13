@@ -815,14 +815,8 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
-  }
-  .w-2 {
-    width: calc(var(--spacing) * 2);
   }
   .w-2\/3 {
     width: calc(2/3 * 100%);
@@ -1869,12 +1863,6 @@
   .text-black {
     color: var(--color-black);
   }
-  .text-black\/10 {
-    color: color-mix(in oklab, var(--color-black) 10%, transparent);
-  }
-  .text-black\/50 {
-    color: color-mix(in oklab, var(--color-black) 50%, transparent);
-  }
   .text-indigo-300 {
     color: var(--color-indigo-300);
   }
@@ -1892,9 +1880,6 @@
   }
   .text-white {
     color: var(--color-white);
-  }
-  .text-white\/10 {
-    color: color-mix(in oklab, var(--color-white) 10%, transparent);
   }
   .capitalize {
     text-transform: capitalize;
@@ -2490,31 +2475,11 @@
       }
     }
   }
-  .hover\:text-black\/50 {
-    &:hover {
-      @media (hover: hover) {
-        color: color-mix(in oklab, var(--color-black) 50%, transparent);
-      }
-    }
-  }
-  .hover\:text-white\/10 {
-    &:hover {
-      @media (hover: hover) {
-        color: color-mix(in oklab, var(--color-white) 10%, transparent);
-      }
-    }
-  }
   .hover\:opacity-90 {
     &:hover {
       @media (hover: hover) {
         opacity: 90%;
       }
-    }
-  }
-  .focus\:outline-none {
-    &:focus {
-      --tw-outline-style: none;
-      outline-style: none;
     }
   }
   .sm\:block {
@@ -2661,6 +2626,18 @@
   50% {
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+@keyframes open-menu {
+  --animate: 0.5s ease-in-out forwards;
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.2);
+  }
+  100% {
+    transform: scaleY(1);
   }
 }
 @property --tw-translate-x {
