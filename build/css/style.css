@@ -1016,6 +1016,9 @@
   .snap-normal {
     scroll-snap-stop: normal;
   }
+  .scroll-m-20 {
+    scroll-margin: calc(var(--spacing) * 20);
+  }
   .scroll-mt-20 {
     scroll-margin-top: calc(var(--spacing) * 20);
   }
