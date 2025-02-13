@@ -374,6 +374,7 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --font-script: Great Vibes, cursive;
   }
 }
 @layer base {
@@ -815,8 +816,14 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
   }
   .w-2\/3 {
     width: calc(2/3 * 100%);
@@ -969,6 +976,9 @@
   }
   .transform-none {
     transform: none;
+  }
+  .animate-\[var\(--animation-open-menu\)\] {
+    animation: var(--animation-open-menu);
   }
   .animate-none {
     animation: none;
@@ -1750,6 +1760,9 @@
   }
   .align-top {
     vertical-align: top;
+  }
+  .font-script {
+    font-family: var(--font-script);
   }
   .text-2xl {
     font-size: var(--text-2xl);
@@ -2626,18 +2639,6 @@
   50% {
     transform: none;
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-}
-@keyframes open-menu {
-  --animate: 0.5s ease-in-out forwards;
-  0% {
-    transform: scaleY(0);
-  }
-  80% {
-    transform: scaleY(1.2);
-  }
-  100% {
-    transform: scaleY(1);
   }
 }
 @property --tw-translate-x {
